@@ -1,5 +1,3 @@
-<import name="about" src="../about/about"></import>
-
 <template>
   <swiper class="main-swiper" vertical="true" indicator="false" loop="false">
     <div class="index">
@@ -84,6 +82,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 100px;
 }
 
 .title { 
@@ -117,8 +116,7 @@ export default {
 
 .bottom-hint {
   width: 100%;
-  height: 100%;
-  height: 80px; 
+  height: 80px;
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
