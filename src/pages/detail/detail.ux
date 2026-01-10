@@ -1,6 +1,6 @@
 <template>
-  <div class="demo-page">
-    <text class="title">您的设备性能得分是：</text>
+  <div class="pages">
+    <text class="title" style="color:white">您的设备性能得分是：</text>
     <text style="font-size:80px;color:red">{{benchres}}</text>
     <div class="btn" onClick="goback"><text style="font-size:45px">Back</text></div>
     <!-- <div class="back_bottom" @click="goback"><text style="font-size:40px">Nav_Back</text></class></div>
@@ -94,7 +94,7 @@ export default {
   width: 180px;
   height: 80px;
   margin-top: 20px;
-  border-radius: 15px;
+  border-radius: 40px;
   background-color: #225beb;
   font-size: 5px;
   color: #ffffff;
@@ -102,7 +102,8 @@ export default {
   align-content: center;
   margin: 20px;
 }
-.demo-page {
+.pages {
+  background-color: #000000;
   flex-direction: column;
   justify-content: center;
   align-items: center;

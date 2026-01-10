@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-page">
+  <div class="pages">
     <text class="title">欢迎使用VelaBench</text>
     <text class="text">Benchmark For Wear & IoT</text>
     <div class="btn" @click="routeDetail">
@@ -36,7 +36,7 @@ export default {
 </script>
 
 <style>
-.demo-page {
+.pages {
   flex-direction: column;
   justify-content: center;
   align-items: center;

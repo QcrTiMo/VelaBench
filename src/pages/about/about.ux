@@ -1,5 +1,5 @@
 <template>
-  <div class="demo-page">
+  <div class="pages">
     <text style="font-size:50px; color: #ffffff;">关于VelaBench</text>
     <text style="font-size:50px"> </text>
     <text style="font-size:25px;text-align: center; color: #ffffff;">VelaBench是一款适用于Xiaomi VelaOS设备的性能基准测试软件</text>
@@ -21,7 +21,7 @@ export default {
 </script>
 
 <style>
-.demo-page {
+.pages {
   flex-direction: column;
   justify-content: center;
   align-items: center;
