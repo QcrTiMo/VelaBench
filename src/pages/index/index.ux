@@ -86,7 +86,7 @@ export default {
 }
 
 .title { 
-  font-size: 40px; 
+  font-size: 50px; 
   color: #ffffff; 
   margin-block-end: 10px; 
 }
