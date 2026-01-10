@@ -2,8 +2,8 @@
   <div class="pages">
     <text class="title">欢迎使用VelaBench</text>
     <text class="text">Benchmark For Wear & IoT</text>
-    <div class="btn" @click="routeDetail">
-      <text class="btn-text">运行性能测试</text>
+    <div class="btn {{isProcessing ? 'btn-disabled' : 'btn-normal'}}" @click="routeDetail">
+      <text class="btn-text">{{ isProcessing ? '跳转中...' : '运行性能测试' }}</text>
     </div>
     <div class="btn" @click="routeAbout">
       <text class="btn-text">关于VelaBench</text>
@@ -18,16 +18,34 @@ import app from '@system.app'
 
 export default {
   private: {
-    title: "VelaBench"
+    title: "VelaBench",
+    isProcessing: false
   },
   onInit() {
     console.log("Index Page Init");
+  },
+  onShow() {
+    this.isProcessing = false;
   },
   quitapp() {
     app.terminate()
   },
   routeDetail() {
-    router.push({ uri: "/pages/detail" })
+    if (this.isProcessing) {
+      return;
+    }
+    this.isProcessing = true;
+    router.push({ 
+      uri: "/pages/detail",
+      success: () => {
+      },
+      fail: () => {
+        this.isProcessing = false;
+      }
+    });
+    setTimeout(() => {
+      this.isProcessing = false;
+    }, 2000);
   },
   routeAbout() {
     router.push({ uri: "/pages/about" })
